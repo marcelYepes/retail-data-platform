@@ -1,0 +1,9 @@
+  bundle:
+    name: retail_data_platform
+
+  targets:
+    dev:
+      mode: development
+      default: true
+      workspace:
+        host: https://dbc-1e05cc2d-ce31.cloud.databricks.com
