@@ -184,6 +184,7 @@ retail-data-platform/
 ├── resources/
 ├── tests/
 ├── docs/
+│   ├── BRONZE_INGESTION_CONTRACT.md
 │   ├── DATASET_INVENTORY.md
 │   └── PROJECT_CONTEXT.md
 ├── data/
@@ -279,11 +280,12 @@ Completed:
 * Unity Catalog catalog and Bronze/Silver/Gold schemas created
 * managed Unity Catalog Volume created for raw source files
 * source inventory and initial data profile documented
+* raw-file layout and Bronze ingestion contract defined
 
 Immediate next steps:
 
-1. Define the raw-file directory layout and Bronze ingestion contract.
-2. Upload the seven source CSV files to the managed Volume and verify them.
-3. Add the first ingestion resource only after the contract and source landing are complete.
+1. Upload the seven source CSV files to the managed Volume and verify their names and sizes.
+2. Define the implementation structure for the Bronze loader and its tests.
+3. Add the first ingestion resource only after the source landing is verified.
 
 The environment and deployment workflow are working. Pipeline implementation has not started yet.
