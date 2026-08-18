@@ -281,11 +281,12 @@ Completed:
 * managed Unity Catalog Volume created for raw source files
 * source inventory and initial data profile documented
 * raw-file layout and Bronze ingestion contract defined
+* seven source CSV files uploaded to the managed Volume and verified by byte size
 
 Immediate next steps:
 
-1. Upload the seven source CSV files to the managed Volume and verify their names and sizes.
-2. Define the implementation structure for the Bronze loader and its tests.
-3. Add the first ingestion resource only after the source landing is verified.
+1. Define the implementation structure for the Bronze loader and its tests.
+2. Implement the explicit Bronze schemas and idempotent full-refresh loader.
+3. Add meaningful Bronze load checks and a Databricks Workflow resource.
 
-The environment and deployment workflow are working. Pipeline implementation has not started yet.
+The environment, deployment workflow, and raw source landing are working. Pipeline implementation has not started yet.
