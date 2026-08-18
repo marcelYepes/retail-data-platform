@@ -202,7 +202,13 @@ The complete Olist dataset must not be committed to GitHub.
 
 `data/sample/` may contain small representative samples if useful for local tests.
 
-Raw production-style data should be stored within the Databricks environment using Unity Catalog-compatible storage.
+Raw production-style data is stored within the Databricks environment using Unity Catalog-compatible storage.
+
+The raw-file landing location is the managed Unity Catalog Volume:
+
+`/Volumes/retail_data_platform/bronze/source_files/`
+
+The managed Volume uses the catalog's Databricks default storage. This keeps file access governed by Unity Catalog and avoids introducing external cloud-storage configuration that the project does not require.
 
 ## Databricks Asset Bundles
 
@@ -271,12 +277,13 @@ Completed:
 * local Databricks CLI authentication configured
 * minimal Databricks Asset Bundle initialized and deployed
 * Unity Catalog catalog and Bronze/Silver/Gold schemas created
+* managed Unity Catalog Volume created for raw source files
 * source inventory and initial data profile documented
 
 Immediate next steps:
 
-1. Review and agree on the raw-data landing strategy in Unity Catalog-compatible storage.
-2. Define the Bronze ingestion contract, including source-to-table naming and ingestion metadata.
-3. Add the first ingestion resource only after those decisions are documented.
+1. Define the raw-file directory layout and Bronze ingestion contract.
+2. Upload the seven source CSV files to the managed Volume and verify them.
+3. Add the first ingestion resource only after the contract and source landing are complete.
 
 The environment and deployment workflow are working. Pipeline implementation has not started yet.

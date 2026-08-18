@@ -4,7 +4,7 @@
 
 This document records the local source-data inspection completed before pipeline implementation. It defines the initial file-to-entity mapping and highlights source characteristics that must be handled deliberately in the Medallion layers.
 
-The full dataset is stored locally under `data/raw/` and is excluded from Git.
+The full dataset is stored locally under `data/raw/` and is excluded from Git. The Databricks landing location is the managed Unity Catalog Volume `/Volumes/retail_data_platform/bronze/source_files/`.
 
 ## Source inventory
 
@@ -93,4 +93,4 @@ Bronze should preserve the source data with minimal changes. Source naming corre
 
 ## Scope boundary
 
-This inventory is a discovery artifact only. No source files have been uploaded to Databricks, no Bronze tables have been created, and no ingestion pipeline has been implemented yet.
+This inventory is a discovery artifact only. The managed landing Volume exists, but no source files have been uploaded to it. No Bronze tables have been created, and no ingestion pipeline has been implemented yet.
