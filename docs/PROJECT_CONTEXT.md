@@ -184,6 +184,7 @@ retail-data-platform/
 ├── resources/
 ├── tests/
 ├── docs/
+│   ├── DATASET_INVENTORY.md
 │   └── PROJECT_CONTEXT.md
 ├── data/
 │   └── sample/
@@ -264,17 +265,18 @@ Completed:
 * high-level architecture defined
 * Bronze/Silver/Gold scope defined
 * business questions defined
-* repository naming defined
+* GitHub repository created and connected
+* Olist source files downloaded and inspected locally
+* Databricks Free Edition access verified
+* local Databricks CLI authentication configured
+* minimal Databricks Asset Bundle initialized and deployed
+* Unity Catalog catalog and Bronze/Silver/Gold schemas created
+* source inventory and initial data profile documented
 
 Immediate next steps:
 
-1. Create/verify the GitHub repository.
-2. Download and inspect the Olist dataset.
-3. Verify access to Databricks Free Edition.
-4. Configure local Databricks CLI authentication.
-5. Initialize Databricks Asset Bundles.
-6. Create the Unity Catalog catalog and schemas.
-7. Deploy a minimal bundle successfully.
-8. Only then begin the ingestion pipeline.
+1. Review and agree on the raw-data landing strategy in Unity Catalog-compatible storage.
+2. Define the Bronze ingestion contract, including source-to-table naming and ingestion metadata.
+3. Add the first ingestion resource only after those decisions are documented.
 
-Do not jump directly into pipeline implementation before the project environment and deployment workflow are working.
+The environment and deployment workflow are working. Pipeline implementation has not started yet.
